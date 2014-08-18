@@ -15,7 +15,7 @@ $j(function(){
     	alert($tab_go);
     });
 
-    var $container = $j('.masonry');
+    var $container = $j('.home .masonry');
     $container.imagesLoaded(function(){
       $container.masonry({
         isAnimated: true,
