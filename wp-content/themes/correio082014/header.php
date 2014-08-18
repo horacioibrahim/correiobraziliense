@@ -27,6 +27,33 @@
 		<script type="text/javascript" src="<?php bloginfo("template_url"); ?>/js/scripts.js"></script>
 	</head>
 	<body id="page" <?php body_class(); ?>>
+		<style>
+			#menu-mocado-wrap: {
+				position: absolute;
+				display: hidden;
+				height: 100%;
+				min-height: 640px;
+				background-color: #555;
+			}
+			.menu-mocado {
+				display: none;
+			}
+		</style>
+		<div id="menu-mocado-wrap">
+			<div class="menu-mocado">
+			<?php
+				$nav_menu = wp_nav_menu(
+					array(
+						'container' => 'nav',
+						'container_class' => 'main-menu',
+						'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+						'theme_location' => 'main-menu',
+						'fallback_cb' => '__return_false',
+					)
+				); 
+			?>
+			</div>		
+		</div>
 		<div class="site">
 			<?php get_template_part( 'header', 'top' ); ?>
 

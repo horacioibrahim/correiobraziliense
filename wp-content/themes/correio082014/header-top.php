@@ -35,7 +35,6 @@
 					<div class="toggle-box toggle-box-search">
 						<form method="get" action="<?php echo home_url( '/' ); ?>" role="search"  class="hipy">
 						  <input id="s" class="field" type="search" name="s" placeholder="Pesquise..." >
-						  <span class="hipy-lupa"><i class="icon-search"></i></span>
 						</form>						
 					</div><!-- .toggle-box -->
 					<!-- show/hide search input-->

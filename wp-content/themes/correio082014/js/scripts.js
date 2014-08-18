@@ -30,5 +30,16 @@ $j(function(){
     });
 
 
+    $j('.menu-item-has-children').on('mouseover', function() {
+        $j(this).children('ul.sub-menu').css('display', 'block');
+    });
+
+    $j('ul.sub-menu').on('mouseout', function() {
+        $j(this).css('display', 'none');
+    });
+
+
+
+
 });
 

@@ -521,6 +521,20 @@
 
 @media only screen and (min-width:1440px) {
     #main { display: block }
+    .navigation-wrap-inside {
+        margin: 0 !important;
+    }
+    .site-description {
+        top: -57px;
+    }
+    .header-search {
+        right: 20px;
+        position: absolute;
+    }
+    .single .block-text, .page .block-text {
+        padding-bottom: 40px !important;
+    }
+
 }
 
 @media (max-width: 640px) {
@@ -565,3 +579,6 @@
     }  
 
 }
+
+/* Extra large creen */
+
