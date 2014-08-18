@@ -1,0 +1,382 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0px none;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0px;
+  outline: 0px none;
+  padding: 0px;
+  vertical-align: baseline;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #8CABBC;
+  color: #efefef;
+  font-family: "Helvetica Neue",Helvetica,sans-serif;
+}
+
+body.custom-background {
+  background-position: center;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+a {
+  color: #fba919;
+  text-decoration: none;
+}
+
+a {
+  transition: all 0.05s ease-in 0s;
+}
+
+h1 a {
+  color: #efefef;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input {
+  background: #efefef;
+  padding: 0.3em 0.4em;
+}
+
+button, input {
+  line-height: normal;
+}
+
+input[type="text"], input[type="email"] {
+  padding: 3px;
+}
+
+input[type="text"], input[type="email"], textarea {
+  color: #666;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+}
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0px;
+  vertical-align: baseline;
+}
+
+.site {
+  overflow: hidden;
+  background: #8cabbc;
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.site:before, .site:after {
+  content: " ";
+  display: table;
+}
+.site:after {
+  clear: both;
+}
+
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.flipInY {
+  backface-visibility: visible !important;
+  animation-name: flipInY;
+}
+
+.site-title {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.site-title a {
+  color: #FFF;
+  transition: all 0.07s ease-in 0s;
+  margin-top: 10px;
+}
+.site-title a .box-logo {
+  color: #FFF;
+  padding: 15px 20px;
+  font-size: 30px;
+  background-color: #E50064;
+  margin-left: 10px;
+  font-family: "Open Sans";
+}
+
+.logo-image .site-title {
+  color: #FFF;
+  padding: 5px 10px;
+  transition: all 0.07s ease-in 0s;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.animated {
+  animation-fill-mode: both;
+  animation-duration: 1s;
+}
+
+.site-description {
+  position: relative;
+  top: -40px;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #FFF;
+}
+
+.site-description-top {
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #FFF;
+  text-transform: none;
+}
+
+.site-title-logo img {
+  width: 400px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  color: #555;
+  font-weight: bold;
+  font-family: "Helvetica Neue",Helvetica,sans-serif;
+  line-height: 1.2;
+  margin: 0px 0px 4%;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.partners {
+  position: relative;
+  float: right;
+  margin-top: -30px;
+}
+
+/******************************************************************************\
+	Settings
+\******************************************************************************/
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url("http://fonts.gstatic.com/s/opensans/v9/u-WUoqrET9fUeobQW7jkRbO3LdcAZYWl9Si6vvxL-qU.woff") format("woff");
+}
+
+/* @font-face {
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/wp-content/themes/correio082014/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("/wp-content/themes/correio082014/fonts/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("/wp-content/themes/correio082014/fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("/wp-content/themes/correio082014/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
+} */
+html {
+  font-size: 14px;
+}
+@media screen and (min-width: 481px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+/******************************************************************************\
+	Font calculation mixins
+\******************************************************************************/
+/******************************************************************************\
+	Standard font styling
+\******************************************************************************/
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 2;
+  font-weight: 400;
+  color: #555;
+  font-weight: 400;
+}
+
+em, i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+strong, b {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+p,
+ul,
+ol {
+  margin-top: 0rem;
+  margin-bottom: 0;
+}
+
+/* blockquote {
+	position: relative;
+
+	&:before {
+		display: block;
+		float: left;
+		content: "\"";
+		@include font-size(2.5);
+		margin: 0 15px 15px 0;
+	}
+} */
+blockquote {
+  margin: 0px;
+}
+
+blockquote {
+  margin: 0px 1.5em;
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans";
+  line-height: 1.2;
+}
+@media screen and (min-width: 769px) {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  h5,
+  h6 {
+    word-wrap: normal;
+  }
+}
+
+h1,
+.h1 {
+  font-size: 35px;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 481px) {
+  h1,
+  .h1 {
+    font-size: 42px;
+    font-size: 3rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 25.2px;
+  font-size: 1.8rem;
+  margin-top: 4rem;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 481px) {
+  h2,
+  .h2 {
+    font-size: 28px;
+    font-size: 2rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 15.4px;
+  font-size: 1.1rem;
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 481px) {
+  h3,
+  .h3 {
+    font-size: 16.8px;
+    font-size: 1.2rem;
+  }
+}
+
+h4,
+h5,
+h6 {
+  font-size: 14px;
+  font-size: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+h2,
+h3 {
+  page-break-after: avoid;
+}
+
+p,
+h2,
+h3 {
+  orphans: 3;
+  widows: 3;
+}
+
+p ~ h1 {
+  margin-top: 4rem;
+}
+
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+html .mceContentBody {
+  font-size: 100%;
+  max-width: 650px;
+}

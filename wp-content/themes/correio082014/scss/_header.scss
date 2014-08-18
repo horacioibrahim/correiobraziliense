@@ -1,0 +1,232 @@
+.site-header {
+    background-color: #FCC20B;
+    z-index: 10;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-size: cover;
+    padding-left: 32px;
+}
+
+.custom-header {
+	position: absolute;
+	top:0;
+}
+
+.logo {
+	@include span-columns(8);
+	@include shift(2);
+	color: $color2;
+	position: relative;
+	z-index: 2;
+
+	.blog-name {
+		margin-bottom: 0.2em;
+		text-align: center;
+		text-shadow: 0 0 .5em $color1;
+	}
+
+	.blog-description {
+		margin-bottom: 1.5em;
+		text-align: center;
+		font-style: italic;
+		text-shadow: 0 0 .5em $color1;
+	}
+}
+
+.navigation-wrap {
+    margin: 0px;
+    padding: 0px 20px;
+    width: 100%;
+    z-index: 50;
+    position: relative;
+    background: none repeat scroll 0% 0% #491A7F;
+    min-height: 54px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
+	.toggle-icons {
+	    float: right;
+	    border-left: 1px dotted #37373C;
+	    padding-left: 10px;
+	    margin-left: 0px;
+	}    
+}
+.toggle-icons {
+
+	li {
+    	list-style-type: none;
+    	display: inline;
+    }
+
+	a {
+	    color: #5C5F66;
+	    padding: 15px 8px;
+	    display: inline-block;
+	    font-size: 11px;
+	    font-weight: bold;
+	    text-transform: uppercase;
+	}    
+	a:hover, a.current {
+	    color: #FFF;
+	    outline: medium none;
+	}	
+}
+
+.toggle-boxes {
+    float: right;
+}
+
+.toggle-box:first-child {
+    display: block;
+}
+
+.toggle-box-social {
+    padding-top: 14px;
+}
+
+.toggle-box {
+    display: none;
+    float: right;
+    padding-right: 15px;
+}
+
+.toggle-box-search {
+    padding-right: 0px;
+}
+
+.navigation-wrap-inside {
+    max-width: 1310px;
+    margin: 0px auto;
+}
+
+.main-navigation {
+    max-width: 100%;
+    ul {
+	    list-style: none outside none;
+	    margin: 0px;
+	    padding-left: 0px;
+	    float: left;
+	    max-width: 900px;
+		ul {
+		    display: none;
+		    float: left;
+		    position: absolute;
+		    top: 54px;
+		    left: 0px;
+		    z-index: 99999;
+		    text-align: left;
+		    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+		    background: linear-gradient(to bottom, #FFF 0%, #F4F4F4 100%) repeat scroll 0% 0% transparent;
+			li {
+			    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+			}	
+			a {
+			    width: 175px;
+			    padding: 10px 15px;
+			    color: #666;
+			}				    
+		}			    
+	}
+
+	li {
+	    display: inline-block;
+	    position: relative;
+	    word-wrap: break-word;
+	}	
+
+	a {
+	    display: block;
+	    text-decoration: none;
+	    //color: #5C5F66;
+	    color: #FFF;
+	    font-size: 11px;
+	    font-weight: bold;
+	    text-transform: uppercase;
+	    padding: 15px 12px;
+	    transition: all 0.07s ease-in 0s;
+	}
+
+	li.current-menu-item > a, li a:hover {
+	    border-radius: 3px;
+	    background: none repeat scroll 0% 0% transparent;
+	    color: #FFF;
+	    transition: all 0.07s ease-in 0s;
+	}
+	li:first-child a {
+	    border-left: medium none;
+	}	
+
+}
+
+.menu > li:first-child a {
+    padding-left: 0px;
+}
+
+article, aside, details, figcaption, figure, footer, header, nav, section {
+    display: block;
+}
+
+.assistive-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    color: #555;
+    font-weight: bold;
+    font-family: "Helvetica Neue",Helvetica,sans-serif;
+    line-height: 1.2;
+    margin: 0px 0px 4%;
+}
+
+.header-search {
+    display: block;
+    float: right;
+
+	.icons {
+	    float: right;
+	}    
+
+	input[type="text"] {
+	    background: none repeat scroll 0% 0% #EEE;
+	    outline: medium none;
+	    transition: all 0.07s ease-in 0s;
+	}	
+
+	input[type="text"] {
+	    border: medium none;
+	    border-radius: 0px;
+	    height: 54px;
+	    background: none repeat scroll 0% 0% #FFF;
+	    padding: 0px 15px;
+	    width: 215px;
+	    font-family: "Helvetica Neue",Helvetica,sans-serif;
+	}	
+}
+
+.header-wrap {
+    margin: 0px;
+    width: 100%;
+    display: inline-block;
+    // padding: 3.5% 20px;
+	.hgroup {
+	    clear: both;
+	    width: 65%;
+	    position: relative;
+	    z-index: 15;   
+	    float: left; 
+	}
+	.hgroup-partners {
+    	width: 35%;
+    	float: right;
+    	text-align: right;
+    	padding-top: 35px;
+    	padding-right: 20px;
+	}
+}
+
+

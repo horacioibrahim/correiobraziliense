@@ -1,0 +1,190 @@
+// variables
+$header-font: "Open Sans";
+$color1: #8CABBC;
+$color2: #efefef;
+$color3: #fba919;
+$radius-search: 18px;
+$color-positive-action: #E50064;
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0px none;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0px;
+    outline: 0px none;
+    padding: 0px;
+    vertical-align: baseline;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// default styling
+body {
+	background: #8CABBC;
+	color: $color2;
+	font-family: "Helvetica Neue",Helvetica,sans-serif;
+}
+
+body.custom-background {
+	background-position: center;
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+a {
+	color: $color3;
+	text-decoration: none;
+}
+
+a {
+    transition: all 0.05s ease-in 0s;
+}
+
+h1 a {
+	color: $color2;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+input {
+	// border: 1px solid $color1;
+	background: $color2;
+	padding: 0.3em 0.4em;
+	//box-shadow: inset -1px -1px 6px $color1;
+}
+
+button, input {
+    line-height: normal;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 3px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    color: #666;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0px;
+    vertical-align: baseline;
+}
+
+.site {
+	overflow: hidden;
+	background: rgba($color1, 1);
+	@include outer-container;
+}
+
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
+}
+
+.flipInY {
+    backface-visibility: visible !important;
+    animation-name: flipInY;
+}
+
+.site-title {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+	a {
+    	color: #FFF;
+    	// padding: 5px 10px;
+    	transition: all 0.07s ease-in 0s;
+    	margin-top: 10px;
+    }
+	a .box-logo {
+	    color: #FFF;
+	    padding: 15px 20px;
+	    font-size: 30px;
+	    background-color: #E50064;
+	    margin-left: 10px; 
+	    font-family: $header-font;   
+	}
+}
+
+.logo-image .site-title {
+    color: #FFF;
+    padding: 5px 10px;
+    transition: all 0.07s ease-in 0s;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+.animated {
+    animation-fill-mode: both;
+    animation-duration: 1s;
+}
+
+.site-description {
+    position: relative;
+    top: -40px;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #FFF;
+}
+
+.site-description-top {
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #FFF;
+    text-transform: none;
+}
+
+.site-title-logo {
+	// margin-top: 10px;
+    img {
+        width: 400px;
+    }
+}
+
+h2 {
+    font-size: 30px;
+}
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    color: #555;
+    font-weight: bold;
+    font-family: "Helvetica Neue",Helvetica,sans-serif;
+    line-height: 1.2;
+    margin: 0px 0px 4%;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -moz-osx-font-smoothing: grayscale;    
+}
+
+.partners {
+    position: relative;
+    float: right;
+    margin-top: -30px;
+}

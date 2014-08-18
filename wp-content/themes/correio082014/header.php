@@ -1,0 +1,52 @@
+<?php
+/**
+ * correio template for displaying the header
+ *
+ * @package WordPress
+ * @subpackage correio
+ * @since correio 1.0
+ */
+?>
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="ie ie-no-support" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 7]>         <html class="ie ie7" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8]>         <html class="ie ie8" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 9]>         <html class="ie ie9" <?php language_attributes(); ?>> <![endif]-->
+<!--[if gt IE 9]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
+	<head>
+		<meta charset="<?php bloginfo( 'charset' ); ?>" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title><?php wp_title( ); ?></title>
+		<meta name="viewport" content="width=device-width" />
+		<!--[if lt IE 9]>
+			<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
+		<![endif]-->
+		<?php wp_enqueue_script("jquery"); ?>
+		<?php wp_head(); ?>
+		<script type="text/javascript" src="<?php bloginfo("template_url"); ?>/js/scripts.js"></script>
+	</head>
+	<body id="page" <?php body_class(); ?>>
+		<div class="site">
+			<?php get_template_part( 'header', 'top' ); ?>
+
+			<header class="site-header">
+				<div class="header-wrap">
+					
+					<div class="hgroup">
+						<span class="site-description-top animated fadeIn">Banco do Brasil apresenta e patrocina</span>
+						<h1 class="site-title animated flipInY site-title-logo">
+							<a href="<?php echo home_url( '/' ); ?>" title="Retrato Brasília" rel="home">
+								<img src="<?php bloginfo("template_url"); ?>/images/logo.png" />
+							</a>
+						</h1>
+						<span class="site-description animated fadeIn"><?php bloginfo( 'description' ); ?></span>
+					</div>
+
+					<div class="hgroup-partners">
+						<div class="logo-part logo-bb">
+						<img src="<?php bloginfo("template_url"); ?>/images/logos-agrupadas.png" /></div>
+					</div>
+
+				</div>		
+			</header>

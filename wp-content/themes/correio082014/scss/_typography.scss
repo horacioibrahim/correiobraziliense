@@ -1,0 +1,172 @@
+/******************************************************************************\
+	Settings
+\******************************************************************************/
+
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url("http://fonts.gstatic.com/s/opensans/v9/u-WUoqrET9fUeobQW7jkRbO3LdcAZYWl9Si6vvxL-qU.woff") format("woff");
+}
+
+/* @font-face {
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/wp-content/themes/correio082014/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("/wp-content/themes/correio082014/fonts/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("/wp-content/themes/correio082014/fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("/wp-content/themes/correio082014/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
+} */
+
+// Variables
+$base-font: "Helvetica Neue",Helvetica,sans-serif;
+$header-font: "Open Sans";
+$base-line-height: 2;
+$base-font-size: 14px;
+
+// Set standard font sizes in media querys
+html {
+    font-size: $base-font-size;
+
+    @include media($medium) { font-size: 18px; }
+
+    @include media($xlarge) { font-size: 20px; }
+}
+
+
+/******************************************************************************\
+	Font calculation mixins
+\******************************************************************************/
+
+// Font size mixin for REM output with PX fallback
+@mixin font-size($size) {
+    font-size: $size * $base-font-size;
+    font-size: #{$size}rem;
+}
+
+// Top margin mixin for REM output with PX fallback
+@mixin leading-rows($size: 1) { margin-top: $size * $base-line-height * 1rem; }
+
+// Bottom margin mixin for REM output with PX fallback
+@mixin trailing-rows($size: 1) {
+	margin-bottom: 0;
+}
+
+
+/******************************************************************************\
+	Standard font styling
+\******************************************************************************/
+
+body {
+	font-family: $base-font;
+	line-height: $base-line-height;
+	font-weight: 400;
+    color: #555;
+    font-weight: 400;
+
+}
+
+em, i {
+	font-style: italic;
+	line-height: inherit;
+}
+
+strong, b {
+	font-weight: bold;
+	line-height: inherit;
+}
+
+p,
+ul,
+ol {
+    @include leading-rows(0);
+    @include trailing-rows(1);
+}
+
+/* blockquote {
+	position: relative;
+
+	&:before {
+		display: block;
+		float: left;
+		content: "\"";
+		@include font-size(2.5);
+		margin: 0 15px 15px 0;
+	}
+} */
+
+blockquote {
+    margin: 0px;
+}
+blockquote {
+    margin: 0px 1.5em;
+}
+blockquote, q {
+    quotes: "" "";
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+h5,
+h6 {
+	font-family: $header-font;
+	line-height: 1.2;
+    // text-transform: uppercase;
+
+    @include media($large) { word-wrap: normal; }
+}
+
+h1,
+.h1 {
+    @include font-size(2.5);
+    @include leading-rows(1);
+    @include trailing-rows(1);
+
+    @include media($medium) { @include font-size(3); }
+}
+
+h2,
+.h2 {
+    @include font-size(1.8);
+    @include leading-rows(2);
+    @include trailing-rows(1);
+
+    @include media($medium) { @include font-size(2); }
+}
+
+h3,
+.h3 {
+    @include font-size(1.1);
+    @include leading-rows(1.5);
+    @include trailing-rows(0.5);
+
+    @include media($medium) { @include font-size(1.2); }
+}
+
+h4,
+h5,
+h6 {
+	@include font-size(1);
+	@include leading-rows(1.5);
+    @include trailing-rows(0.5);
+}
+
+h2,
+h3 { page-break-after: avoid; }
+
+p,
+h2,
+h3 {
+    orphans: 3;
+    widows: 3;
+}
+
+p ~ h1 { @include leading-rows(2); }
+
+dfn, cite, em, i {
+    font-style: italic;
+}
