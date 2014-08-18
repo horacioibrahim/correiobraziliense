@@ -191,7 +191,10 @@ article {
             text-align: center;
             padding: 0px 12%;
         }
-    }    
+    }  
+    .block-container-wrap {
+
+    }
 }
 
 .single .block-text, .page .block-text {
@@ -1156,3 +1159,58 @@ blockquote, q {
     }        
 }
 
+
+/* **************
+/* MENU MOCADO */
+/**************/
+
+#menu-mocado-wrap {
+    position: absolute;
+    display: hidden;
+    height: 100%;
+    min-height: 640px;
+    background-color: #555;
+}
+.menu-mocado {
+    display: none;
+
+    ul.menu {
+        font-size: 16px;
+        font-weight: 400px;
+        display: block;
+        position: absolute;
+        width: 100%;
+        li {
+            color: #CCC;
+            padding: 5px 5px 5px 15px;
+            //border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+            transition: #6363CE 300ms ease 0s;
+            a {
+                color: #CCC;
+
+            }            
+        }  
+
+        ul {
+            list-style: none;   
+            li {
+                padding-left: 8px;
+                a {
+                    color: #CCC;
+                    transition: #6363CE 300ms ease 0s;
+                }                      
+            }
+        }                    
+    }        
+}
+
+.site-header {
+    #menu-mobile {
+        top: 31px;
+        left: 8px;
+        position: absolute;
+        float: left;
+        background: none repeat scroll 0% 0% transparent;
+        color: rgba(255, 255, 255, 0.8);    
+    }
+}

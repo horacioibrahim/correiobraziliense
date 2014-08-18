@@ -412,7 +412,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 body {
-  background: #8CABBC;
+  background: #555;
   color: #efefef;
   font-family: "Helvetica Neue",Helvetica,sans-serif;
 }
@@ -471,17 +471,9 @@ button, input, select, textarea {
 .site {
   overflow: hidden;
   background: #8cabbc;
-  *zoom: 1;
-  max-width: 68em;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-}
-.site:before, .site:after {
-  content: " ";
-  display: table;
-}
-.site:after {
-  clear: both;
 }
 
 .size-auto,
@@ -579,6 +571,10 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   float: right;
   margin-top: -30px;
+}
+
+#menu-mobile {
+  display: none;
 }
 
 /******************************************************************************\
@@ -843,6 +839,14 @@ dfn, cite, em, i {
     overflow-x: hidden;
   }
 
+  #menu-mobile {
+    display: block;
+  }
+
+  .site {
+    padding-top: 30px !important;
+  }
+
   pre:before {
     font-size: 14px;
   }
@@ -880,10 +884,6 @@ dfn, cite, em, i {
   }
   .site-title-logo img {
     width: 300px !important;
-  }
-
-  .content-section {
-    margin-top: -20px !important;
   }
 
   .single-tab-nav li {
@@ -965,7 +965,7 @@ dfn, cite, em, i {
     margin-top: 30px !important;
   }
 
-  #primary {
+  #primary, #primary-empty {
     width: 100% !important;
     float: none;
   }
@@ -998,11 +998,7 @@ dfn, cite, em, i {
   }
 
   .navigation-wrap {
-    min-height: 44px;
-  }
-
-  .navigation-wrap-inside {
-    min-height: 44px;
+    display: none;
   }
 
   .archive-box li {
@@ -1014,10 +1010,6 @@ dfn, cite, em, i {
   .sticky-wrapper {
     height: auto !important;
     position: relative !important;
-  }
-
-  .menu {
-    display: none;
   }
 
   .main-small-navigation .menu {
@@ -1091,11 +1083,11 @@ dfn, cite, em, i {
 
   /* Header Toggles */
   .navigation-wrap .toggle-icons {
-    float: left;
-    width: 100%;
-    padding-left: 0;
-    border-left: none;
-    border-top: solid 1px #37373c;
+    float: left !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    border-left: none !important;
+    border-top: solid 1px #37373c !important;
   }
 
   .toggle-icons a {
@@ -1346,10 +1338,39 @@ dfn, cite, em, i {
   #main {
     display: block;
   }
+
+  .navigation-wrap-inside {
+    margin: 0 !important;
+  }
+
+  .site-description {
+    top: -57px;
+  }
+
+  .header-search {
+    right: 20px;
+    position: absolute;
+  }
+
+  .single .block-text, .page .block-text {
+    padding-bottom: 40px !important;
+  }
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   #main {
     margin-top: 0px !important;
+  }
+
+  .content-section {
+    margin-top: -20px;
+  }
+
+  nav.main-navigation {
+    position: absolute;
+  }
+
+  #menu-icon {
+    display: inline-block;
   }
 
   .block-container-wrap {
@@ -1372,11 +1393,21 @@ dfn, cite, em, i {
   .site-header {
     height: 56px !important;
   }
+  .site-header #menu-mobile {
+    top: 9px !important;
+  }
 
   .site-title-logo {
     margin-top: 10px !important;
   }
+
+  .error404 #content-wrap #searchsubmit, .search-no-results #content-wrap #searchsubmit {
+    margin-top: 13px !important;
+    width: 100% !important;
+    position: relative !important;
+  }
 }
+/* Extra large creen */
 .sticky {
   background: none;
 }
@@ -1665,16 +1696,22 @@ dfn, cite, em, i {
   float: left;
   position: absolute;
   top: 54px;
-  left: 0px;
+  left: -14px;
+  padding-left: 10px;
   z-index: 99999;
   text-align: left;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  background: linear, to bottom, white 0%, #f4f4f4 100% repeat scroll 0% 0% transparent;
+  background: none repeat scroll 0% 0% #FFF;
 }
 .main-navigation ul ul li {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 .main-navigation ul ul a {
+  width: 175px;
+  padding: 10px 15px;
+  color: #666;
+}
+.main-navigation ul ul a:visited {
   width: 175px;
   padding: 10px 15px;
   color: #666;
@@ -2920,6 +2957,55 @@ blockquote, q {
 }
 .author-posts li a:hover {
   color: #e50064;
+}
+
+/* **************
+/* MENU MOCADO */
+/**************/
+#menu-mocado-wrap {
+  position: absolute;
+  display: hidden;
+  height: 100%;
+  min-height: 640px;
+  background-color: #555;
+}
+
+.menu-mocado {
+  display: none;
+}
+.menu-mocado ul.menu {
+  font-size: 16px;
+  font-weight: 400px;
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+.menu-mocado ul.menu li {
+  color: #CCC;
+  padding: 5px 5px 5px 15px;
+  transition: #6363CE 300ms ease 0s;
+}
+.menu-mocado ul.menu li a {
+  color: #CCC;
+}
+.menu-mocado ul.menu ul {
+  list-style: none;
+}
+.menu-mocado ul.menu ul li {
+  padding-left: 8px;
+}
+.menu-mocado ul.menu ul li a {
+  color: #CCC;
+  transition: #6363CE 300ms ease 0s;
+}
+
+.site-header #menu-mobile {
+  top: 31px;
+  left: 8px;
+  position: absolute;
+  float: left;
+  background: none repeat scroll 0% 0% transparent;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .format-status .date, .format-link .date, .format-quote .date {

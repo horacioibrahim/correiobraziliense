@@ -80,6 +80,14 @@
 @media only screen and (max-width:768px) {
     body, html { overflow-x: hidden }
 
+    #menu-mobile {
+        display: block;
+    }
+
+    .site {
+        padding-top: 30px !important;
+    }
+
     pre:before { font-size: 14px }
 
     #content .block-text blockquote:before {
@@ -123,7 +131,7 @@
     }
 
     .content-section {
-        margin-top: -20px !important;
+        // margin-top: -0px !important;
     }
 
     .single-tab-nav {
@@ -230,9 +238,11 @@
         }
     }
 
-    .navigation-wrap { min-height: 44px !important; }
+    // .navigation-wrap { min-height: 44px !important; }
 
-    .navigation-wrap-inside { min-height: 44px }
+    // .navigation-wrap-inside { min-height: 44px }
+
+    .navigation-wrap { display: none; }
 
     .archive-box li {
         font-size: 16px;
@@ -245,8 +255,6 @@
         height: auto !important;
         position: relative !important;
     }
-
-    .menu { display: none }
 
     .main-small-navigation .menu { display: none }
 
@@ -543,6 +551,10 @@
         margin-top: 0px !important;
     }
 
+    .content-section {
+        margin-top: -20px;
+    }
+
     nav.main-navigation {
         position: absolute;
     }
@@ -567,6 +579,9 @@
 
     .site-header {
         height: 56px !important;
+        #menu-mobile {
+            top: 9px !important;
+        }
     }
 
     .site-title-logo {

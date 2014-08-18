@@ -1,4 +1,5 @@
 var $j = jQuery.noConflict();
+var $global_w_site = $j('.site').width();
 
 $j(function(){
 
@@ -38,8 +39,25 @@ $j(function(){
         $j(this).css('display', 'none');
     });
 
+    $j('#menu-mobile').click(function(){
+        var $is_open = $j('.site').css('margin-left');
+        var $w_screen = $j( document ).width();
+        var $w_site = $j('.site').width();
 
+        if ( $is_open == '200px' ) {
+            $j('.menu-mocado main-menu').css('display', 'none');
+            $j('.site').animate({"margin-left":'0'}, 400, 'linear');
+            $j('.site').css('top', 'auto');
+            $j('.site').css('width', "100%");
+        } else {
+            // $j('.site').css('position', 'absolute');
+            $j('.menu-mocado main-menu').css('display', 'block');
+            $j('.site').css('width', $w_screen);
+            $j('.site').css('top', '0');
+            $j(".site").animate({"margin-left":'200px'}, 400, 'linear');
+        }
 
+    }); 
 
 });
 

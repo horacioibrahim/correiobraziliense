@@ -18,7 +18,7 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><?php wp_title( ); ?></title>
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lt IE 9]>
 			<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
 		<![endif]-->
@@ -27,18 +27,6 @@
 		<script type="text/javascript" src="<?php bloginfo("template_url"); ?>/js/scripts.js"></script>
 	</head>
 	<body id="page" <?php body_class(); ?>>
-		<style>
-			#menu-mocado-wrap: {
-				position: absolute;
-				display: hidden;
-				height: 100%;
-				min-height: 640px;
-				background-color: #555;
-			}
-			.menu-mocado {
-				display: none;
-			}
-		</style>
 		<div id="menu-mocado-wrap">
 			<div class="menu-mocado">
 			<?php
@@ -58,8 +46,8 @@
 			<?php get_template_part( 'header', 'top' ); ?>
 
 			<header class="site-header">
+				<a id="menu-mobile" href="#"><i class="icon-reorder" style=""></i></a>			
 				<div class="header-wrap">
-					
 					<div class="hgroup">
 						<span class="site-description-top animated fadeIn">Banco do Brasil apresenta e patrocina</span>
 						<h1 class="site-title animated flipInY site-title-logo">
