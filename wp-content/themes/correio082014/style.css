@@ -1405,7 +1405,7 @@ dfn, cite, em, i {
     margin-top: 10px !important;
   }
 
-  .error404 #content-wrap #searchsubmit, .search-no-results #content-wrap #searchsubmit {
+  .error404 #content-wrap #searchsubmit, .search-no-results #content-wrap #searchsubmit, .archive #searchsubmit {
     margin-top: 13px !important;
     width: 100% !important;
     position: relative !important;
