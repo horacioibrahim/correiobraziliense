@@ -306,9 +306,11 @@
 
     .header-search .icon-links a:first-child { margin-left: 0 }
 
-    .error404 #content-wrap #s, .error404 #content-wrap #searchsubmit { height: 35px }
+    .error404 #content-wrap #s, .error404 #content-wrap #searchsubmit, 
+    .hipy-search-no-results #content-wrap #searchsubmit { height: 35px }
 
-    .error404 #content-wrap #searchform { margin-bottom: 5% 4% }
+    .error404 #content-wrap #searchform,
+    .hipy-search-no-results #content-wrap #searchform { margin-bottom: 5% 4% }
 
     /* Header Toggles */
 
@@ -591,7 +593,8 @@
     .site-title-logo {
         margin-top: 10px !important;
     }
-    .error404 #content-wrap #searchsubmit, .search-no-results #content-wrap #searchsubmit, .archive #searchsubmit {
+    .error404 #content-wrap #searchsubmit, .search-no-results #content-wrap #searchsubmit,
+    .hipy-search-no-results #content-wrap #searchsubmit {
         margin-top: 13px !important;
         width: 100% !important;
         position: relative !important;
