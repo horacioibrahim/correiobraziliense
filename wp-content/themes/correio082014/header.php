@@ -28,7 +28,7 @@
 	</head>
 	<?php if ( !have_posts() ) { $no_results='hipy-search-no-results'; } else { $no_results = "hipy-search-results" ;} ?>
 
-	<body id="page" <?php body_class($no_results); ?>>
+	<body onorientationchange="updateOrientation();" id="page" <?php body_class($no_results); ?>>
 		<div id="menu-mocado-wrap">
 			<div class="menu-mocado">
 			<?php

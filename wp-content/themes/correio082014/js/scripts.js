@@ -1,6 +1,10 @@
 var $j = jQuery.noConflict();
 var $global_w_site = $j('.site').width();
 
+function updateOrientation() {
+    $j('.site').css('height',$j(window).height()+'px');
+};
+
 $j(function(){
 
     $j('.single-tab-nav > li').click(function(e) {
@@ -62,6 +66,8 @@ $j(function(){
         }
 
     }); 
+
+    $j('.site').css('height',$j(window).height()+'px');
 
 });
 
