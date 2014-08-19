@@ -60,7 +60,7 @@
 
 					<div class="hgroup-partners">
 						<div class="logo-part logo-bb">
-						<img src="<?php bloginfo("template_url"); ?>/images/logos-agrupadas.png" /></div>
+						<img src="<?php bloginfo("template_url"); ?>/images/partners.png" /></div>
 					</div>
 
 				</div>		

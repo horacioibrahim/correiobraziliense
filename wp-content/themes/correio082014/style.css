@@ -839,6 +839,10 @@ dfn, cite, em, i {
     overflow-x: hidden;
   }
 
+  .block-container-wrap {
+    padding-top: 30px;
+  }
+
   #menu-mobile {
     display: block;
   }

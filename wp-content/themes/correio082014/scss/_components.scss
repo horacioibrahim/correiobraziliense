@@ -80,6 +80,10 @@
 @media only screen and (max-width:768px) {
     body, html { overflow-x: hidden }
 
+    .block-container-wrap {
+        padding-top: 30px;
+    }
+
     #menu-mobile {
         display: block;
     }
