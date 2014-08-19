@@ -10,7 +10,8 @@
 get_header(); ?>
 
 
-<div id="main" class="site-main blocks-page clearfix <?php if ( !have_posts() ) { echo 'hipy-search-no-results'; } ?>">
+<div id="main" class=<?php if ( !have_posts() ) { echo "site-main blocks-page clearfix hipy-search-no-results"; } 
+			else { echo "site-main blocks-page clearfix"; } ?>>
 	<div class="archive-title">
 		<h1 ><?php printf( __( 'Resultados para: %s', 'correio082014' ), get_search_query() ); ?></h1>
 	</div>
@@ -24,7 +25,7 @@ get_header(); ?>
 
 									while ( have_posts() ) : the_post();
 
-										get_template_part( 'loop', get_post_format() );
+										get_template_part( 'loop', '' ); //get_post_format()
 
 									endwhile;
 

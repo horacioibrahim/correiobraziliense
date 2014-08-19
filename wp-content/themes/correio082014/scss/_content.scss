@@ -132,7 +132,7 @@ article {
         padding: 5% 0px 6%;
 }    
 
-.error404, .search-no-results {
+.error404, .search-no-results, .hipy-search-no-results {
 
     .archive-title {
             display: none;
@@ -601,7 +601,7 @@ a:hover, a:active {
     padding-right: 2%;
 }
 
-.search-no-results .block-container-inside {
+.search-no-results .block-container-inside, .hipy-search-no-results {
     padding-top: 0 !important;
 }
 
@@ -659,7 +659,7 @@ a:hover, a:active {
     position: absolute !important;
 }
 
-#page .blocks-content, .archive #content, .search-results #main #content {
+#page .blocks-content, .archive.hipy-search-results #content, .search-results #main #content {
     box-shadow: none;
     margin: 0px;
     padding: 0px;
@@ -675,7 +675,7 @@ a:hover, a:active {
     }
 }
 
-.blocks-page #primary, .archive #primary, .search #primary.hipy-no-style {
+.blocks-page #primary, .archive.hipy-search-results #primary, .search #primary.hipy-no-style {
     margin: 0px;
     padding: 0px;
     width: 100%;

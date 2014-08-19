@@ -1367,6 +1367,10 @@ dfn, cite, em, i {
     margin-top: 0px !important;
   }
 
+  .hipy-search-no-results .content-section {
+    margin-top: 0px !important;
+  }
+
   .content-section {
     margin-top: -20px;
   }
@@ -1963,47 +1967,47 @@ article:after {
   padding: 5% 0px 6%;
 }
 
-.error404 .archive-title, .search-no-results .archive-title {
+.error404 .archive-title, .search-no-results .archive-title, .hipy-search-no-results .archive-title {
   display: none;
 }
-.error404 .entry-header h1, .search-no-results .entry-header h1 {
+.error404 .entry-header h1, .search-no-results .entry-header h1, .hipy-search-no-results .entry-header h1 {
   margin-bottom: 2%;
   font-size: 32px;
   text-align: center;
 }
-.error404 #content, .search-no-results #content {
+.error404 #content, .search-no-results #content, .hipy-search-no-results #content {
   padding: 5% 0px 6%;
   box-shadow: none;
 }
-.error404 #main, .search-no-results #main {
+.error404 #main, .search-no-results #main, .hipy-search-no-results #main {
   position: relative;
   padding: 6% 6% 8% !important;
   max-width: 1440px;
   margin: 0px auto -7px;
 }
-.error404 #primary, .search-no-results #primary {
+.error404 #primary, .search-no-results #primary, .hipy-search-no-results #primary {
   float: none;
   margin: 0px auto;
   display: block;
 }
-.error404 #primary-empty, .search-no-results #primary-empty {
+.error404 #primary-empty, .search-no-results #primary-empty, .hipy-search-no-results #primary-empty {
   float: none;
   margin: 0px auto;
   display: block;
   width: 71%;
 }
-.error404 #content-wrap #searchform, .search-no-results #content-wrap #searchform {
+.error404 #content-wrap #searchform, .search-no-results #content-wrap #searchform, .hipy-search-no-results #content-wrap #searchform {
   position: relative;
   margin: 5% 10%;
 }
-.error404 #content-wrap #s, .search-no-results #content-wrap #s {
+.error404 #content-wrap #s, .search-no-results #content-wrap #s, .hipy-search-no-results #content-wrap #s {
   width: 100%;
   height: 50px;
   border: medium none;
   background: none repeat scroll 0% 0% #F4F4F4;
   padding: 0px 15px;
 }
-.error404 #content-wrap #searchsubmit, .search-no-results #content-wrap #searchsubmit {
+.error404 #content-wrap #searchsubmit, .search-no-results #content-wrap #searchsubmit, .hipy-search-no-results #content-wrap #searchsubmit {
   position: absolute;
   right: 0px;
   top: 0px;
@@ -2011,7 +2015,7 @@ article:after {
   margin-top: 0;
   font-family: "Helvetica Neue",Helvetica,sans-serif;
 }
-.error404 #content-wrap p, .search-no-results #content-wrap p {
+.error404 #content-wrap p, .search-no-results #content-wrap p, .hipy-search-no-results #content-wrap p {
   text-align: center;
   padding: 0px 12%;
 }
@@ -2446,7 +2450,7 @@ a:hover, a:active {
   padding-right: 2%;
 }
 
-.search-no-results .block-container-inside {
+.search-no-results .block-container-inside, .hipy-search-no-results {
   padding-top: 0 !important;
 }
 
@@ -2504,7 +2508,7 @@ a:hover, a:active {
   position: absolute !important;
 }
 
-#page .blocks-content, .archive #content, .search-results #main #content {
+#page .blocks-content, .archive.hipy-search-results #content, .search-results #main #content {
   box-shadow: none;
   margin: 0px;
   padding: 0px;
@@ -2518,7 +2522,7 @@ a:hover, a:active {
   padding: 0;
 }
 
-.blocks-page #primary, .archive #primary, .search #primary.hipy-no-style {
+.blocks-page #primary, .archive.hipy-search-results #primary, .search #primary.hipy-no-style {
   margin: 0px;
   padding: 0px;
   width: 100%;
