@@ -16,7 +16,7 @@ $j(function(){
     	alert($tab_go);
     });
 
-    var $container = $j('.home .masonry');
+    var $container = $j('#page .masonry');
     $container.imagesLoaded(function(){
       $container.masonry({
         isAnimated: true,
@@ -46,7 +46,9 @@ $j(function(){
 
         if ( $is_open == '200px' ) {
             $j('.menu-mocado main-menu').css('display', 'none');
-            $j('.site').animate({"margin-left":'0'}, 400, 'linear');
+            $j('.site').animate({"margin-left":'0'}, 400, 'linear', function() {
+                $j('.menu-mocado').css('display', 'none');
+            });
             $j('.site').css('top', 'auto');
             $j('.site').css('width', "100%");
         } else {
@@ -54,7 +56,9 @@ $j(function(){
             $j('.menu-mocado main-menu').css('display', 'block');
             $j('.site').css('width', $w_screen);
             $j('.site').css('top', '0');
-            $j(".site").animate({"margin-left":'200px'}, 400, 'linear');
+            $j(".site").animate({"margin-left":'200px'}, 400, 'linear', function() {
+                $j('.menu-mocado').css('display', 'block');
+            });
         }
 
     }); 

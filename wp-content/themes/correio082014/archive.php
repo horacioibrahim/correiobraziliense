@@ -9,17 +9,15 @@
 
 get_header(); ?>
 
-	<section class="page-content primary" role="main"><?php
-
-		if ( have_posts() ) : ?>
-
-			<h1 class="archive-title">
+<div id="main" class="site-main blocks-page clearfix <?php if ( !have_posts() ) { echo 'hipy-search-no-results'; } ?>">
+	<div class="archive-title">
+			<h1>
 				<?php
 					if ( is_category() ):
-						printf( __( 'Category Archives: %s', 'correio082014' ), single_cat_title( '', false ) );
+						printf( __( 'Resultados para: %s', 'correio082014' ), single_cat_title( '', false ) );
 
 					elseif ( is_tag() ):
-						printf( __( 'Tag Archives: %s', 'correio082014' ), single_tag_title( '', false ) );
+						printf( __( 'Resultados para tag: %s', 'correio082014' ), single_tag_title( '', false ) );
 
 					elseif ( is_tax() ):
 						$term     = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
@@ -43,44 +41,33 @@ get_header(); ?>
 
 					endif;
 				?>
-			</h1><?php
+			</h1>
+	</div>
+	<div id="primary<?php if ( !have_posts() ) { echo '-empty'; } ?>" class="<?php if ( !have_posts() ) { echo 'hipy-empty'; } ?>">
+		<div id="content" class="site-content" role="main">
+				<div class="block-container-wrap">
+					<div class="block-container-inside clearfix">
+						<section  id="block-container" class="masonry" >
+							<?php
+								if ( have_posts() ) :
 
-			if ( is_category() || is_tag() || is_tax() ):
-				$term_description = term_description();
-				if ( ! empty( $term_description ) ) : ?>
+									while ( have_posts() ) : the_post();
 
-					<div class="archive-description"><?php
-						echo $term_description; ?>
-					</div><?php
+										get_template_part( 'loop', '' ); //get_post_format()
 
-				endif;
-			endif;
+									endwhile;
 
-			if ( is_author() && get_the_author_meta( 'description' ) ) : ?>
+								else :
 
-				<div class="archive-description">
-					<?php the_author_meta( 'description' ); ?>
-				</div><?php
+									get_template_part( 'loop', 'empty' );
 
-			endif;
-
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'loop', get_post_format() );
-
-			endwhile;
-
-		else :
-
-			get_template_part( 'loop', 'empty' );
-
-		endif; ?>
-
-		<div class="pagination">
-
-			<?php get_template_part( 'template-part', 'pagination' ); ?>
-
+								endif;
+							?>
+						</section>
+					</div>
+				</div>
 		</div>
-	</section>
+	</div>
+</div>	
 
 <?php get_footer(); ?>

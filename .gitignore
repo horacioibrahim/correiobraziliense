@@ -1,6 +1,7 @@
 .settings
 settings_dev.py
 wp-config.php
+.sass-cache
 .pydevproject
 .project
 *.bak

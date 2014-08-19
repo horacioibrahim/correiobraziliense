@@ -154,9 +154,9 @@
     }
 
     .archive-title h1 {
-        font-size: 16px;
-        border: solid 4px;
-        padding: 3px 8px;
+        font-size: 16px !important;
+        border: solid 4px !important;
+        padding: 3px 8px !important;
     }
 
     .single .block-entry-title, .entry-header h1 {
@@ -591,7 +591,7 @@
     .site-title-logo {
         margin-top: 10px !important;
     }
-    .error404 #content-wrap #searchsubmit, .search-no-results #content-wrap #searchsubmit  {
+    .error404 #content-wrap #searchsubmit, .search-no-results #content-wrap #searchsubmit, .archive #searchsubmit {
         margin-top: 13px !important;
         width: 100% !important;
         position: relative !important;
