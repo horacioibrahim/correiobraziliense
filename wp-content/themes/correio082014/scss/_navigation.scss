@@ -13,4 +13,15 @@
 		color: $color2;
 	}
 
+	.menu-item {
+
+		.sub-menu a:hover {
+			color: $color-positive-action;
+		}
+		
+		a:hover {
+			color: $color2;
+		}
+	}
+
 }
