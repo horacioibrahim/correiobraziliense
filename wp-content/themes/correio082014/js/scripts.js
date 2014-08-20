@@ -2,7 +2,7 @@ var $j = jQuery.noConflict();
 var $global_w_site = $j('.site').width();
 
 function updateOrientation() {
-    $j('.site').css('height',$j(window).height()+'px');
+    $j('.site').css('min-height',$j(window).height()+'px');
 };
 
 $j(function(){
@@ -67,7 +67,7 @@ $j(function(){
 
     }); 
 
-    $j('.site').css('height',$j(window).height()+'px');
+    $j('.site').css('min-height',$j(window).height()+'px');
 
 });
 
