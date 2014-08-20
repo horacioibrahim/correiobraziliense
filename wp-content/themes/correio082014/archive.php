@@ -11,21 +11,23 @@ get_header(); ?>
 
 <div id="main" class="site-main clearfix">
 	<div id="primary" class="<?php if ( !have_posts() ) { echo 'hipy-empty'; } ?>">
-		<?php
-			if ( have_posts() ) :
+		<section class="masonry">
+			<?php
+				if ( have_posts() ) :
 
-				while ( have_posts() ) : the_post();
+					while ( have_posts() ) : the_post();
 
-					get_template_part( 'loop', '' ); //get_post_format()
+						get_template_part( 'loop', '' ); //get_post_format()
 
-				endwhile;
+					endwhile;
 
-			else :
+				else :
 
-				get_template_part( 'loop', 'empty' );
+					get_template_part( 'loop', 'empty' );
 
-			endif;
-		?>
+				endif;
+			?>
+		</section>
 	</div>
 </div>	
 

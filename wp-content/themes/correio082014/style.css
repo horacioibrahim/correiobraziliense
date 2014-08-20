@@ -2099,7 +2099,7 @@ article:after {
   display: inline-block;
   border-width: 1px 1px medium;
   border-style: solid solid none;
-  border-color: #E3E3E3 #E3E3E3 -moz-use-text-color;
+  border-color: #EFEFEF #EFEFEF;
   -moz-border-top-colors: none;
   -moz-border-right-colors: none;
   -moz-border-bottom-colors: none;
@@ -2522,7 +2522,7 @@ a:hover, a:active {
   padding: 0;
 }
 
-.blocks-page #primary, .archive.hipy-search-results #primary, .search #primary.hipy-no-style {
+.blocks-page #primary, .archive.hipy-search-results #primary, .search #primary {
   margin: 0px;
   padding: 0px;
   width: 100%;
@@ -2661,8 +2661,12 @@ a:hover, a:active {
   width: 71%;
 }
 
-.archive #main, .search #main, #page .blocks-page {
-  padding: 0px;
+.archive #main, .search #main {
+  padding: 4% 0 0 0;
+}
+
+#page.home .blocks-page {
+  padding: 0;
 }
 
 #main {
@@ -2854,8 +2858,8 @@ blockquote, q {
   -moz-border-radius-bottomright: 18px;
   border-top-right-radius: 18px;
   border-bottom-right-radius: 18px;
-  transition: width 0.6s;
-  -webkit-transition: width 0.6s;
+  transition: width 0.7s;
+  -webkit-transition: width 0.7s;
   /* Safari */
   transition-timing-function: ease;
   -webkit-transition-timing-function: ease;

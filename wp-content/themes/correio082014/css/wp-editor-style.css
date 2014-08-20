@@ -375,4 +375,5 @@ dfn, cite, em, i {
 html .mceContentBody {
   font-size: 100%;
   max-width: 650px;
+  background-color: #FFF;
 }
