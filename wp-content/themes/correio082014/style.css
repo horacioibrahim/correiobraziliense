@@ -1982,7 +1982,6 @@ article:after {
 .error404 #main, .search-no-results #main, .hipy-search-no-results #main {
   position: relative;
   padding: 6% 6% 8% !important;
-  max-width: 1440px;
   margin: 0px auto -7px;
 }
 .error404 #primary, .search-no-results #primary, .hipy-search-no-results #primary {
@@ -2672,7 +2671,6 @@ a:hover, a:active {
 #main {
   position: relative;
   padding: 6% 6% 8%;
-  max-width: 1440px;
   margin: 0px auto -7px;
 }
 
