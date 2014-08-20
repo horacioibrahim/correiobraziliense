@@ -1359,7 +1359,7 @@ dfn, cite, em, i {
   }
 
   .single .block-text, .page .block-text {
-    padding-bottom: 40px !important;
+    padding-bottom: 150px !important;
   }
 }
 @media (max-width: 640px) {
@@ -1816,8 +1816,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 35%;
   float: right;
   text-align: right;
-  padding-top: 35px;
-  padding-right: 20px;
+  padding-top: 40px;
+  padding-right: 30px;
 }
 
 .main-menu .menu-item a {
