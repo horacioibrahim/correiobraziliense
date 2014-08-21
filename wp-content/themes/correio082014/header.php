@@ -42,6 +42,12 @@
 					)
 				); 
 			?>
+			<div class="search-wrapper">
+				<form method="get" action="<?php echo home_url( '/' ); ?>" role="search"  class="hipy">
+					<input id="s" class="field" type="search" name="s" placeholder="Pesquise..." >
+				</form>	
+			</div>
+
 			</div>		
 		</div>
 		<div class="site">

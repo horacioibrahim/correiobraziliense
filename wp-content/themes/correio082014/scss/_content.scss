@@ -2,7 +2,6 @@
 	General
 \******************************************************************************/
 
-
 article {
 	@include clearfix;
 }
@@ -1070,6 +1069,16 @@ blockquote, q {
     }    
 }
 
+
+.search-wrapper {
+    min-height: 40px;
+    .hipy input[type="search"] {
+    width: auto;  
+    position: absolute;
+    left: 15px;  
+    }
+}
+
 .archive-title {
      h1 {
         display: inline-block;
@@ -1183,6 +1192,7 @@ blockquote, q {
         font-weight: 400px;
         display: block;
         position: absolute;
+        top: 46px;
         width: 100%;
         li {
             color: #CCC;
