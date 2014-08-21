@@ -21,7 +21,6 @@ $j(function(){
     });
 
     var $container = $j('#page .masonry');
-    $container.imagesLoaded(function(){
       $container.masonry({
         isAnimated: true,
         animationOptions: {
@@ -29,10 +28,8 @@ $j(function(){
             easing: 'linear',
             queue: false
         },      
-        itemSelector : '.block',
-        
+        itemSelector : '.block',        
       });
-    });
 
 
     $j('.menu-item-has-children').on('mouseover', function() {
