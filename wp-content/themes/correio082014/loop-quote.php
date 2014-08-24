@@ -9,14 +9,15 @@
 ?>
 
 <div <?php post_class('block animated fadeIn masonry-brick'); ?>>
-  <div <?php post_class(); ?>>
 	<?php 
   		if ( catch_that_image() ) { 
+  				//echo '<div>';
 	  			echo '<a href="'; the_permalink(); echo '" class="thumbnail-wrapper">';
 	  			echo '<img src="';
 	  			echo catch_that_image();
 	  			echo '" alt="" />';
 	  			echo '</a>';
+	  			//echo '</div>';
   		}
 	?>	
 	<div class="block-titles-wrap">
@@ -90,5 +91,4 @@
 		</div>	
 	</div>
 
-  </div>
 </div>

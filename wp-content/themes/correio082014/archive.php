@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div id="main" class="site-main clearfix">
 	<div id="primary" class="<?php if ( !have_posts() ) { echo 'hipy-empty'; } ?>">
-		<section class="masonry">
+		<section id="block-container" class="masonry">
 			<?php
 				if ( have_posts() ) :
 
@@ -28,6 +28,9 @@ get_header(); ?>
 				endif;
 			?>
 		</section>
+		<div id="nav-below" style="opacity: 0;">
+			<?php echo get_next_posts_link('Go to next page',4); ?>
+		</div>		
 	</div>
 </div>	
 

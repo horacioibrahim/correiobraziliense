@@ -20,17 +20,17 @@ $j(function(){
     	alert($tab_go);
     });
 
-    var $container = $j('#page .masonry');
-      $container.masonry({
-        isAnimated: true,
-        animationOptions: {
-            duration: 750,
-            easing: 'linear',
-            queue: false
-        },      
-        itemSelector : '.block',        
-      });
-
+    /* var $container = $j('#page .masonry');
+          $container.masonry({      
+            itemSelector : '.block',        
+          });
+    */
+    var container = document.querySelector('#page .masonry');
+    var msnry = new Masonry(container);
+    // layout Masonry again after all images have loaded
+    imagesLoaded( container, function() {
+      msnry.layout();
+    });
 
     $j('.menu-item-has-children').on('mouseover', function() {
         $j(this).children('ul.sub-menu').css('display', 'block');

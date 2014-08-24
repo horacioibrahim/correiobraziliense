@@ -24,7 +24,10 @@
 			  ga('create', 'UA-53911661-1', 'auto');
 			  ga('send', 'pageview');
 
-			</script>			
+			</script>
+			<script type="text/javascript" src="<?php bloginfo("template_url"); ?>/js/masonry.pkgd.min.js"></script>
+			<script type="text/javascript" src="<?php bloginfo("template_url"); ?>/js/imagesloaded.js"></script>
+			
 		<?php wp_footer(); ?>
 	</body>
 </html>

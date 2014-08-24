@@ -15,7 +15,7 @@ get_header(); ?>
 				<div class="blocks-wrap clearfix">
 					<div class="block-container-wrap">
 						<div class="block-container-inside clearfix">
-							<section  id="block-container" class="masonry" >
+							<section  id="block-container" class="masonry">
 								<?php
 									if ( have_posts() ) :
 

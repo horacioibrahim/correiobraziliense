@@ -31,6 +31,9 @@ get_header(); ?>
 												endwhile;
 										?>
 										</section>
+										<div id="nav-below" style="opacity: 0;">
+											<?php echo get_next_posts_link('Go to next page',4); ?>
+										</div>										
 									</div>
 								</div>
 		</div>
