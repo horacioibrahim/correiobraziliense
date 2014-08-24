@@ -17,4 +17,4 @@ share
 *.db
 .DS_Store
 .idea
-.uploads
+uploads/
