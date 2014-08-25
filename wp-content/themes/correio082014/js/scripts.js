@@ -26,10 +26,10 @@ $j(function(){
           });
     */
     var container = document.querySelector('#block-container');
-    var msnry = new Masonry(container);
+    var msnry;
     // layout Masonry again after all images have loaded
     imagesLoaded( container, function() {
-      msnry.layout();
+        msnry = new Masonry(container);
     });
 
     $j('.menu-item-has-children').on('mouseover', function() {
