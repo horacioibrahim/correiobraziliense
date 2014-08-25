@@ -25,7 +25,7 @@ $j(function(){
             itemSelector : '.block',        
           });
     */
-    var container = document.querySelector('#page .masonry');
+    var container = document.querySelector('#block-container');
     var msnry = new Masonry(container);
     // layout Masonry again after all images have loaded
     imagesLoaded( container, function() {
