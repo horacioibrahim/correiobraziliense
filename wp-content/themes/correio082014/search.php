@@ -32,8 +32,14 @@ get_header(); ?>
 										?>
 										</section>
 										<div id="nav-below" style="opacity: 0;">
-											<?php echo get_next_posts_link('Go to next page',4); ?>
-										</div>										
+											<?php  
+											 $next = get_next_posts_link();
+											 preg_match_all('~<a(.*?)href="([^"]+)"(.*?)>~', $next, $matches);
+											 $link = $matches[2][0];
+											 $rel_path = correio082014_get_relative_path_url($link);
+											 ?>
+											 <a href="<?php echo $rel_path; ?>" />Next post </a>
+										</div>									
 									</div>
 								</div>
 		</div>

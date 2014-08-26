@@ -25,9 +25,47 @@
 			  ga('send', 'pageview');
 
 			</script>
-			<script type="text/javascript" src="<?php bloginfo("template_url"); ?>/js/masonry.pkgd.min.js"></script>
-			<script type="text/javascript" src="<?php bloginfo("template_url"); ?>/js/imagesloaded.js"></script>
+			<script type="text/javascript" src="<?php bloginfo("template_url"); ?>/js/imagesloaded.pkgd.js"></script>
+			<script type="text/javascript" src="<?php bloginfo("template_url"); ?>/js/jquery.masonry.min.js"></script>
+			<script type="text/javascript" src="<?php bloginfo("template_url"); ?>/js/jquery.infinitescroll.min.js"></script>
+			<script type="text/javascript" src="<?php bloginfo("template_url"); ?>/js/isotope.pkgd.min.js"></script>
 			
+<script>
+  $j(function(){
+    /************
+    * INFINITE SCROLL + MASONRY FOR CORREIOBRAZILIENSE 
+    **************/
+    var $container = $j('#block-container');
+    var msnry;
+    // layout Masonry again after all images have loaded
+    $container.imagesLoaded(function(){
+        $container.masonry({
+            itemSelector: '.block',
+      });
+    });
+
+    $container.infinitescroll({
+      navSelector  : '#nav-below',    // selector for the paged navigation
+      nextSelector : '#nav-below a',  // selector for the NEXT link (to page 2)
+      itemSelector : '.block',     // selector for all items you'll retrieve
+      loading: {
+          finishedMsg: '...',
+          img: 'http://retratobrasilia.com.br/wp-content/uploads/2014/08/loader.gif'
+        }
+      },
+      // trigger Masonry as a callback
+      function( newElements ) {
+        // hide new items while they are loading
+        var $newElems = $j( newElements ).css({ opacity: 0 });
+        // ensure that images load before adding to masonry layout
+        $newElems.imagesLoaded(function(){
+          // show elems now they're ready
+          $newElems.animate({ opacity: 1 });
+          $container.masonry( 'appended', $newElems, true );
+        });
+    });
+  });		
+  </script>	
 		<?php wp_footer(); ?>
 	</body>
 </html>

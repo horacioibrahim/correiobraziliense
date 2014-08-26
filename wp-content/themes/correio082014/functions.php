@@ -170,4 +170,15 @@ function get_related_author_posts() {
 
     return $output;
 }
+function correio082014_get_relative_path_url($typedURL)
+{
+	global $blog_id;
+	$abs_path = network_site_url( '/' );
+
+	$rel_path = str_replace($abs_path,'',$typedURL);
+
+	return $rel_path;
+}
+
+add_filter('wp_handle_upload', 'correio082014_get_relative_path_url');
 

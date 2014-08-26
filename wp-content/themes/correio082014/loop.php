@@ -40,9 +40,26 @@
 			</h2>
 			<?php 
 				if ( get_post_gallery() ) :
-					echo get_post_gallery();
-				endif;
-			?>			
+					$gallery = get_post_gallery();
+					
+					echo "";
+					//$gallery = get_post_gallery( get_the_ID(), false );
+					$count = 0;
+
+		            foreach( $gallery['src'] AS $src )
+		            {
+		            	if ( $count == 4 ) {
+		            		break;
+		            	}
+		    ?>
+		                <img src="<?php echo $src; ?>" class="my-custom-class" alt="Gallery image" />
+		                
+		    <?php
+		                $count += 1;
+		    }	
+
+				endif;			
+			?>	
 		</div><!-- .block-titles -->
 		<div class="block-text"><?php
 
