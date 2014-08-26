@@ -145,6 +145,7 @@ button, input, select, textarea {
 }
 
 .site-description-top {
+  font-family: "Arial Bold", "Helvetica Neue", sans-serif;
   font-size: 12px;
   line-height: 1.4;
   font-weight: bold;
