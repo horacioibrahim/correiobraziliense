@@ -40,11 +40,12 @@
 			</h2>
 			<?php 
 				if ( get_post_gallery() ) :
-					$gallery = get_post_gallery();
-					
-					echo "";
+					$gallery = get_post_gallery($post->ID);
+					echo $gallery;
+					// $attachment_ids = correio082014_get_random_gallery_images();
+					//echo do_shortcode('[ gallery columns="4" include="'.$attachment_ids.'" link="file" ]'); 
 					//$gallery = get_post_gallery( get_the_ID(), false );
-					$count = 0;
+					/* $count = 0;
 
 		            foreach( $gallery['src'] AS $src )
 		            {
@@ -52,11 +53,12 @@
 		            		break;
 		            	}
 		    ?>
+
 		                <img src="<?php echo $src; ?>" class="my-custom-class" alt="Gallery image" />
 		                
 		    <?php
 		                $count += 1;
-		    }	
+		    }	*/
 
 				endif;			
 			?>	
