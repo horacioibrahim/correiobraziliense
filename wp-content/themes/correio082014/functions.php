@@ -170,6 +170,7 @@ function get_related_author_posts() {
 
     return $output;
 }
+
 function correio082014_get_relative_path_url($typedURL)
 {
 	global $blog_id;
@@ -181,33 +182,4 @@ function correio082014_get_relative_path_url($typedURL)
 }
 
 add_filter('wp_handle_upload', 'correio082014_get_relative_path_url');
-
-function correio082014_get_random_gallery_images(){  
-    global $wpdb,$post;  
-        $ids = "";  
-        $counter = 0;  
-        $number_of_posts = 4;  
-        $args = array(  
-        'post_type' => 'attachment',  
-        'numberposts' => 4,  
-        'post_status' => null,  
-        'orderby' => 'rand',  
-        'post_parent' => $post->ID  
-        );  
-        $attachments = get_posts($args);  
-        if ($attachments) {  
-            foreach ($attachments as $attachment) {  
-  
-                if ($counter != 0) {  
-                    $ids .= ','.$attachment->ID;  
-                }  
-                else {  
-                    $ids .= $attachment->ID;  
-                }  
-                $counter++;  
-            }  
-        }  
-        return $ids;  
-} 
-add_filter('wp_handle_upload', 'correio082014_get_random_gallery_images');
 
