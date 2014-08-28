@@ -426,7 +426,7 @@ body.custom-background {
 }
 
 a {
-  color: #fba919;
+  color: #e50064;
   text-decoration: none;
 }
 
@@ -1523,7 +1523,7 @@ dfn, cite, em, i {
   padding: 0.3em 0.4em;
   border: 1px solid #8cabbc;
   margin-top: 0.2em;
-  background-color: #fba919;
+  background-color: #e50064;
   color: #8cabbc;
   box-shadow: none;
 }
@@ -1574,7 +1574,7 @@ dfn, cite, em, i {
 }
 
 .byuser .comment-author {
-  background-color: #fba919;
+  background-color: #e50064;
   color: #8cabbc;
 }
 .byuser .comment-author a {
@@ -3041,7 +3041,7 @@ blockquote, q {
   position: absolute;
   float: left;
   background: none repeat scroll 0% 0% transparent;
-  color: #ffca03;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .format-status .date, .format-link .date, .format-quote .date {
@@ -3058,7 +3058,7 @@ blockquote, q {
 }
 
 .format-quote .date {
-  border-color: #fba919;
+  border-color: #e50064;
 }
 
 .format-status .post-title {
@@ -3079,7 +3079,6 @@ blockquote, q {
   display: block;
   margin-right: 3.06748%;
   width: 100%;
-  background: #8cabbc;
   padding: 1.5em 0;
   list-style: none;
   margin: 0;
