@@ -153,6 +153,9 @@ button, input, select, textarea {
   color: #FFF;
   text-transform: none;
 }
+.site-description-top small {
+  font-weight: normal;
+}
 
 .site-title-logo img {
   width: 400px;

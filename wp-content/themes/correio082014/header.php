@@ -57,7 +57,7 @@
 				<a id="menu-mobile" href="#"><i class="icon-reorder" style=""></i></a>			
 				<div class="header-wrap">
 					<div class="hgroup">
-						<span class="site-description-top animated fadeIn">Banco do Brasil apresenta e patrocina</span>
+						<span class="site-description-top animated fadeIn">Banco do Brasil <small>apresenta e patrocina</small></span>
 						<h1 class="site-title animated flipInY site-title-logo">
 							<a href="<?php echo home_url( '/' ); ?>" title="Retrato Brasília" rel="home">
 								<img src="<?php bloginfo("template_url"); ?>/images/logo.png" />

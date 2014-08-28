@@ -157,6 +157,9 @@ button, input, select, textarea {
     letter-spacing: 2px;
     color: #FFF;
     text-transform: none;
+    small {
+        font-weight: normal;
+    }
 }
 
 .site-title-logo {
