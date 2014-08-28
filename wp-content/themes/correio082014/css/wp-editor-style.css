@@ -81,7 +81,7 @@ button, input, select, textarea {
 
 .site {
   overflow: hidden;
-  background: #8cabbc;
+  background: #9cb8c8;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -140,7 +140,7 @@ button, input, select, textarea {
   font-size: 12px;
   line-height: 1.4;
   font-weight: bold;
-  letter-spacing: 4px;
+  letter-spacing: 7px;
   color: #FFF;
 }
 
