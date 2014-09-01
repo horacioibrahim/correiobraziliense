@@ -236,9 +236,12 @@
 
     .header-wrap { 
         padding: 0 !important ;
-        margin-top: -6px !important;
+        margin-top: -8px !important;
         span.site-description-top, span.site-description {
             font-size: 10px !important;
+        }
+        .site-description {
+            letter-spacing: 6px !important;
         }
     }
 
@@ -579,24 +582,45 @@
     }
 
     .block { width: 93% !important;}
-    .site-description-top, .site-description, .hgroup-partners {
+    
+    .hgroup-partners {
         display: none;
+    }
+    
+    .site-description-top, .header-wrap span.site-description-top {
+        font-size: 9px !important;
+    }
+
+    .site-description, .header-wrap span.site-description {
+        font-size: 9px !important;
+        letter-spacing: 3px !important;
+        top: -45px;
     }
 
     .header-wrap {
         margin-top: 8px 10px 10px 2px !important;
     }
 
+    .header-wrap {
+        margin-top: -14px !important;
+    }
+
     .site-header {
-        height: 56px !important;
+        height: 69px !important;
         #menu-mobile {
             top: 9px !important;
         }
     }
 
-    .site-title-logo {
-        margin-top: 10px !important;
+    .header-wrap .hgroup {
+        width: 100% !important;
     }
+
+    .site-title-logo {
+        margin-top: -10px !important;
+        width: 200px;
+    }
+
     .error404 #content-wrap #searchsubmit, .search-no-results #content-wrap #searchsubmit,
     .hipy-search-no-results #content-wrap #searchsubmit {
         margin-top: 13px !important;
@@ -604,6 +628,30 @@
         position: relative !important;
     }  
 
+}
+
+@media (max-width: 480px) {
+    .site-description {
+        top: -35px !important;
+    }
+    .header-wrap {
+        margin-top: -7px !important;    
+    }    
+}
+
+@media (max-width: 365px) {
+    .site-description {
+        top: -29px !important;
+    }
+    .header-wrap {
+        margin-top: -7px !important;    
+    }
+}
+
+@media (max-width: 320px) {
+    .site-description {
+        top: -29px !important;
+    }
 }
 
 /* Extra large creen */
