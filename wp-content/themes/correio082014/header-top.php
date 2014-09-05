@@ -29,6 +29,16 @@
 				<!-- btn actions topmnu -->
 				<!-- btn actions topmnu -->
 				<!-- btns social -->
+				<div class="icons-widget">
+					<div class="icon-links">
+						<a href="https://www.facebook.com/retratobrasilia" class="facebook-icon" title="Facebook">
+							<i class="icon-facebook"></i>
+						</a>
+						<a href="http://instagram.com/retratobrasilia" class="tumblr-instagram" title="Instagram">
+							<i class="icon-instagram"></i>
+						</a>
+					</div><!-- .icon-links -->
+				</div>				
 				<div class="toggle-boxes">
 					<!-- btns social -->
 					<!-- show/hide search input-->

@@ -430,6 +430,10 @@ a {
   text-decoration: none;
 }
 
+.icon-links a {
+  color: #FFFFFF;
+}
+
 a {
   transition: all 0.05s ease-in 0s;
 }
@@ -2435,6 +2439,15 @@ article:after {
 }
 .page-content .widgets .read-more:hover {
   border-bottom: 2px solid #fff;
+}
+
+.header-search .icons-widget {
+  float: left;
+  margin-right: 20px;
+  margin-top: 8px;
+}
+.header-search .icons-widget .icon-links a {
+  margin-left: 6px;
 }
 
 /*********************

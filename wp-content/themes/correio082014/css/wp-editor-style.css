@@ -41,6 +41,10 @@ a {
   text-decoration: none;
 }
 
+.icon-links a {
+  color: #FFFFFF;
+}
+
 a {
   transition: all 0.05s ease-in 0s;
 }
