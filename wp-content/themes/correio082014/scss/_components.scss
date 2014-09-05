@@ -29,10 +29,13 @@
 
 /* Small */
 
-@media screen and (max-width: 760) {
+@media screen and (max-width: 760px) {
     .hgroup-partners {
     display: none !important;
   }
+    .single-post .site-content, .page .content-area {
+        margin-top: 29px !important;
+    }
 }
 
 @media screen and (min-width: 481px) {
@@ -557,15 +560,19 @@
 
 @media (max-width: 640px) {
 
-    #main {
-        margin-top: 0px !important;
+    .single-post #main {
+        margin-top: 10px !important;
     }
+
+    .page #main {
+        margin-top: 10px !important;
+    }    
 
     .hipy-search-no-results .content-section {
         margin-top: 0px !important; // cause problem with txt in no-results
     }   
     .content-section {
-        margin-top: -20px;
+        // margin-top: -20px;
     }
 
     nav.main-navigation {
