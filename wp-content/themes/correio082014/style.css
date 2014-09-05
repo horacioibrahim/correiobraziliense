@@ -1388,6 +1388,10 @@ dfn, cite, em, i {
   }
 }
 @media (max-width: 640px) {
+  .hipy input[type="search"], .hipy input[type="search"]:focus {
+    width: auto !important;
+  }
+
   .single-post #main {
     margin-top: 10px !important;
   }
