@@ -846,6 +846,16 @@ dfn, cite, em, i {
   }
 }
 /* Tablet and Mobile */
+@media only screen and (min-width: 768px) {
+  .hipy input[type="search"] {
+    width: 46px !important;
+    font-size: 12px !important;
+  }
+
+  .hipy input[type="search"]:focus {
+    width: 58px !important;
+  }
+}
 @media only screen and (max-width: 768px) {
   body, html {
     overflow-x: hidden;
