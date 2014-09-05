@@ -846,7 +846,7 @@ dfn, cite, em, i {
   }
 }
 /* Tablet and Mobile */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 800px) {
   .hipy input[type="search"] {
     width: 46px !important;
     font-size: 12px !important;
